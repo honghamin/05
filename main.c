@@ -4,18 +4,22 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-    int sum=0;
-    int x; 
-    int i;
+	int a,b;
+	char c;
+	int result;
 	
-	printf("정수를 입력하시오.") ;
-	scanf("%d", &x);
+	printf("계산식을 쓰시오:");
+	scanf("%d%c%d", &a,&c,&b);
 	
-	//for문을 활용해서 1부터 x까지 sum 에 더하는 코드
-	for (i=0;i<=x;i++)
-	    sum=sum+i;
-	  
-	
-	printf("합은 %d입니다.",sum);
+	if (c=='+')
+	    result = a+b;
+    else if (c=='-')
+        result=a-b;
+    else if (c=='/')
+        result=a/b;
+    else
+        result=a*b;
+        
+    printf("=%i", result);
 	return 0;
 }
