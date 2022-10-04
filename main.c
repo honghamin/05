@@ -4,16 +4,18 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	char c;
-	int num=0;
+    int sum=0;
+    int x; 
+    int i;
 	
-	printf("문자열을 입력하세요: ");
+	printf("정수를 입력하시오.") ;
+	scanf("%d", &x);
 	
-	while ((c= getchar())!='\n') //입력 문자가 개행문자가 나올때까지 반 복  
-	{
-		if (c>='0' && c<= '9') //입력된 글자가 숫자인가? 아스키 코드를 암기하지 못 하니 ''를 통해 아스키 코드 이용 
-		num+=1; //참이면 하나를 센다. 
-	}
-	printf("숫자의 개수는 %i입니다.\n", num); //출력  
+	//for문을 활용해서 1부터 x까지 sum 에 더하는 코드
+	for (i=0;i<=x;i++)
+	    sum=sum+i;
+	  
+	
+	printf("합은 %d입니다.",sum);
 	return 0;
 }
